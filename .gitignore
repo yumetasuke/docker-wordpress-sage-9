@@ -1,0 +1,11 @@
+.idea
+*.log
+containers/mysql/data/*
+!containers/mysql/data/.gitkeep
+/src/*
+!/src/.gitkeep
+!/src/wp-content
+/src/wp-content/*
+!/src/wp-content/themes
+/src/wp-content/themes/*
+!/src/wp-content/themes/your-theme-name
