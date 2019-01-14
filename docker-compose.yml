@@ -32,6 +32,7 @@ services:
   mysql:
     image: mysql:5.7.24
     container_name: yumetasuke_mysql
+    restart: always
     environment:
       MYSQL_DATABASE: *db-name
       MYSQL_USER: *db-user
@@ -43,12 +44,14 @@ services:
   composer:
     image: composer:1.8.0
     container_name: yumetasuke_composer
+    restart: always
     volumes:
       - src_dir:/app
 
   node:
     image: node:10.15.0-alpine
     container_name: yumetasuke_node
+    restart: always
     working_dir: /home/node/
     volumes:
       - src_dir:/home/node
